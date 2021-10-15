@@ -101,10 +101,10 @@ app.get("/url/sentiment", (req,res) => {
 app.get("/text/emotion", (req,res) => {
     console.log("text emotion request is triggered!!")
      // //Extract the url passed from the client through the request object
-     let urlToAnalyze = req.query.url
+     let textToAnalyze = req.query.text
      const analyzeParams = 
         {
-            "url": urlToAnalyze,
+            "url": textToAnalyze,
             "features": {
                "keywords": {
                    "emotion": true,
@@ -127,10 +127,10 @@ app.get("/text/emotion", (req,res) => {
 
 app.get("/text/sentiment", (req,res) => {
     console.log("text sentiment request is triggered!!")
-     let urlToAnalyze = req.query.url
+     let textToAnalyze = req.query.text
      const analyzeParams = 
         {
-            "url": urlToAnalyze,
+            "text": textToAnalyze,
             "features": {
                "keywords": {
                    "sentiment": true,
